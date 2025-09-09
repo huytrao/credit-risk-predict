@@ -2,20 +2,19 @@
 """
 Home Credit Default Risk - 快速开始脚本 (优化版)
 
-这个脚本演示了完整的项目流程，支持检查点功能：
-1. 数据加载
-2. 特征工程
-3. 模型训练
-4. 生成提交文件
+the code covers the following steps:
+1. fist step is data loading
+2. second step is feature engineering
+3. third step is model training
+4. fourth step is creating submission file
 
-使用方法:
+you can run the script as follows:
 python quick_start.py [--force-restart] [--skip-to STEP]
 
-参数:
---force-restart: 强制重新开始所有步骤
---skip-to STEP: 跳转到指定步骤 (1-5)
+arguments:
+--force-restart: that's force restart all steps
+--skip-to STEP: that's skip to the specified step (1-5)
 
-注意: 请确保已下载数据集到 data/raw/ 目录
 """
 
 import os
@@ -33,6 +32,7 @@ sys.path.append('.')
 from src.data.data_loader import HomeCreditDataLoader, reduce_memory_usage
 from src.features.feature_engineering import FeatureEngineer
 from src.models.model_trainer import ModelTrainer
+import sys; print(sys.path)
 from src.utils.visualization import DataVisualizer
 
 # the checkpoint files
@@ -101,7 +101,7 @@ def main():
     parser.add_argument('--skip-to', type=int, choices=[1,2,3,4,5], help='Skip to the specified step')
     args = parser.parse_args()
 
-    print("🏠 Home Credit Default Risk - the quick start (optimized)")
+        print("Home Credit Default Risk - the quick start (optimized)")
     print("=" * 50)
     
     # Handle force restart

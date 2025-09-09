@@ -29,7 +29,7 @@ class ModelTrainer:
         """
         self.n_folds = n_folds
         self.random_state = random_state
-        self.models = {}
+        self.models = []
         self.cv_scores = {}
         self.feature_importance = {}
         
@@ -162,6 +162,8 @@ class ModelTrainer:
         print(f"OOF AUC: {oof_auc:.6f}")
         print(f"CV AUC: {np.mean(cv_scores):.6f} +/- {np.std(cv_scores):.6f}")
 
+        self.models.extend(models)
+
         # the Save Results
         result = {
             'models': models,
@@ -172,7 +174,6 @@ class ModelTrainer:
             'feature_importance': feature_importance
         }
         
-        self.models['lightgbm'] = result
         self.cv_scores['lightgbm'] = cv_scores
         self.feature_importance['lightgbm'] = feature_importance
         
