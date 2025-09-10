@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Home Credit Default Risk Project
 
 ## Project Introduction
@@ -72,24 +71,3 @@ Predict each applicant's ability to repay the loan, using AUC (Area Under the RO
 ## Evaluation Metric
 
 Use AUC (Area Under the ROC Curve) as the main evaluation metric.
-=======
----
-title: Finance Risk Check
-emoji: 🚀
-colorFrom: red
-colorTo: red
-sdk: docker
-app_port: 8501
-tags:
-- streamlit
-pinned: false
-short_description: Streamlit template space
----
-
-# Welcome to Streamlit!
-
-Edit `/src/streamlit_app.py` to customize this app to your heart's desire. :heart:
-
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
->>>>>>> 01d757a6cd21488668cce877c070f8e5c5717a25
