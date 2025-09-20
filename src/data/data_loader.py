@@ -1,6 +1,7 @@
 """
 # the code below in order to load and preprocess the Home Credit Default Risk dataset.
-# It includes functions to load each individual data file, reduce memory usage,
+# It includes functions to load each individual data file, reduce memory usage by reduces code ,
+
 """
 
 import pandas as pd
